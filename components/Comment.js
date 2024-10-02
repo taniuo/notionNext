@@ -68,8 +68,8 @@ const Comment = ({ frontMatter, className }) => {
   const commentRef = useRef(null)
 
   const COMMENT_ARTALK_SERVER = siteConfig('COMMENT_ARTALK_SERVER')
-  const COMMENT_TWIKOO_ENV_ID = siteConfig('COMMENT_TWIKOO_ENV_ID')
   const COMMENT_WALINE_SERVER_URL = siteConfig('COMMENT_WALINE_SERVER_URL')
+  const COMMENT_TWIKOO_ENV_ID = siteConfig('COMMENT_TWIKOO_ENV_ID')
   const COMMENT_VALINE_APP_ID = siteConfig('COMMENT_VALINE_APP_ID')
   const COMMENT_GISCUS_REPO = siteConfig('COMMENT_GISCUS_REPO')
   const COMMENT_CUSDIS_APP_ID = siteConfig('COMMENT_CUSDIS_APP_ID')
@@ -148,15 +148,15 @@ const Comment = ({ frontMatter, className }) => {
             </div>
           )}
 
-          {COMMENT_TWIKOO_ENV_ID && (
-            <div key='Twikoo'>
-              <TwikooCompenent />
-            </div>
-          )}
-
           {COMMENT_WALINE_SERVER_URL && (
             <div key='Waline'>
               <WalineComponent />
+            </div>
+          )}
+
+          {COMMENT_TWIKOO_ENV_ID && (
+            <div key='Twikoo'>
+              <TwikooCompenent />
             </div>
           )}
 
